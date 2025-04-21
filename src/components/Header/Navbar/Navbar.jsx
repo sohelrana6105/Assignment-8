@@ -16,18 +16,31 @@ const Navbar = () => {
           <li>
             <NavLink
               to={"/"}
-              className={({ isActive }) => (isActive ? "underline" : "")}
+              className={({ isActive }) =>
+                isActive
+                  ? " border-[#9c8b7e] border-b-2 p-1 text-[#f00606]"
+                  : ""
+              }
             >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink>My-Bookings</NavLink>
+            <NavLink
+              to={"/appointment"}
+              className={({ isActive }) =>
+                isActive ? " border-[#9c8b7e] border-b-2 p-1" : ""
+              }
+            >
+              My-Bookings
+            </NavLink>
           </li>
           <li>
             <NavLink
               to={"/blogs"}
-              className={({ isActive }) => (isActive ? "underline" : "")}
+              className={({ isActive }) =>
+                isActive ? " border-[#9c8b7e] border-b-2 p-1" : ""
+              }
             >
               Blogs
             </NavLink>

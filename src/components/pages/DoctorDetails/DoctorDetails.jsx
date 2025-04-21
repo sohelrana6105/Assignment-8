@@ -1,9 +1,11 @@
-import React from "react";
-import { useLoaderData, useParams } from "react-router";
+import { NavLink, useLoaderData, useNavigate, useParams } from "react-router";
 import DoctorSample2 from "../../../assets/doctor-sample.png";
 import { FaRegRegistered } from "react-icons/fa";
 import { PiWarningCircleBold } from "react-icons/pi";
+import { toast } from "react-toastify";
+
 const DoctorDetails = () => {
+  const navigate = useNavigate();
   const { registrationNumber } = useParams();
 
   const alldoctorData = useLoaderData();
@@ -21,7 +23,33 @@ const DoctorDetails = () => {
     availability,
     consultationFee,
   } = singleDoctor;
-  console.log(singleDoctor);
+
+  //11111
+  const getStoredReg = () => {
+    const bookedDocData = localStorage.getItem("bookedDoctors");
+
+    if (bookedDocData) {
+      const bookedDoc = JSON.parse(bookedDocData);
+      return bookedDoc;
+    } else {
+      return [];
+    }
+  };
+  //2222
+  const handleBooking = (RegNo) => {
+    const bookedDoc = getStoredReg();
+
+    if (bookedDoc.includes(RegNo)) {
+      toast.error("Already Booked!");
+    } else {
+      bookedDoc.push(RegNo);
+      const data = JSON.stringify(bookedDoc);
+
+      localStorage.setItem("bookedDoctors", data);
+      navigate("/appointment");
+      toast.success(`Appointment scheduled for ${name} successfully!`);
+    }
+  };
 
   return (
     <div>
@@ -41,21 +69,21 @@ const DoctorDetails = () => {
           {/* card container */}
           <div>
             <h1 className="font-bold text-3xl mb-2">{name}</h1>
-            <p className="py-3">
+            <div className="py-3">
               <h2 className="font-semibold text-[#0F0F0F99] text-md ">
                 {education}
               </h2>
               <h2 className="font-semibold text-[#0F0F0F99] text-md ">
                 {speciality}
               </h2>
-            </p>
+            </div>
 
-            <p>
+            <div>
               <h2 className="font-semibold text-[#0F0F0F99] text-md mb-2">
                 Working at
               </h2>
               <h2 className="font-bold  text-md ">{workingAt}</h2>
-            </p>
+            </div>
 
             <div className="my-3 border-1 border-dashed border-[#cfc89e] w-[90%]"></div>
             <h3 className="flex items-center gap-3">
@@ -70,8 +98,11 @@ const DoctorDetails = () => {
 
             <h3 className="flex gap-3 items-center">
               <span className="font-bold"> Availablity </span>
-              {availability.map((day) => (
-                <button className="flex gap-3 text-[#FFA000] bg-[#f7ebd6]  px-5 py-1 rounded-2xl">
+              {availability.map((day, index) => (
+                <button
+                  key={index}
+                  className="flex gap-3 text-[#FFA000] bg-[#f7ebd6]  px-5 py-1 rounded-2xl"
+                >
                   {day}
                 </button>
               ))}
@@ -100,12 +131,12 @@ const DoctorDetails = () => {
 
       <section className="bg-[#FFFF] shadow-2xl rounded-2xl p-10 mb-20 mx-20">
         <h1 className="text-2xl font-bold text-center">Book an Appointment</h1>
-        <p className="flex justify-between my-8">
+        <div className="flex justify-between my-8">
           <h3 className="font-bold">Availability</h3>
           <h3 className="bg-[#d6e7db] text-[#09982F] px-6 py-1 rounded-2xl">
             Dooctor Available Today
           </h3>
-        </p>
+        </div>
 
         <p className="flex items-center bg-[#f5e4c7] text-[#FFA000] text-sm rounded-2xl mb-12">
           <span className="mx-2">
@@ -115,9 +146,14 @@ const DoctorDetails = () => {
           for today only. We appreciate your understanding and cooperation.
         </p>
 
-        <div className="text-center bg-[#176AE5] rounded-2xl py-1">
-          <button className=" text-white  ">Book Appoinment Now</button>
-        </div>
+        <NavLink>
+          <div
+            onClick={() => handleBooking(registrationNumber)}
+            className="text-center bg-[#176AE5] rounded-2xl py-1"
+          >
+            <button className=" text-white  ">Book Appoinment Now</button>
+          </div>
+        </NavLink>
       </section>
     </div>
   );

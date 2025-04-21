@@ -28,7 +28,14 @@ const Footer = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={""}>My-Bookings</NavLink>
+            <NavLink
+              to={"/appointment"}
+              className={({ isActive }) =>
+                isActive ? " border-[#9c8b7e] border-b-2 p-1" : ""
+              }
+            >
+              My-Bookings
+            </NavLink>
           </li>
           <li>
             <NavLink
