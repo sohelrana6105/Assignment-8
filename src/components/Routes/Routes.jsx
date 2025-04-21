@@ -4,6 +4,7 @@ import Roots from "../Roots/Roots";
 import ErrorPages from "../pages/ErrorPages/ErrorPages";
 import Home from "../Home/Home";
 import Blogs from "../pages/Blogs/Blogs";
+import DoctorDetails from "../pages/DoctorDetails/DoctorDetails";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,14 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         Component: Blogs,
+      },
+      {
+        path: "/doctorDeatils/:registrationNumber",
+
+        loader: () =>
+          fetch("/public/DoctorsData.json").then((res) => res.json()),
+
+        Component: DoctorDetails,
       },
     ],
   },

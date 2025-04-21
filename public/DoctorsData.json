@@ -9,7 +9,8 @@
     "registrationNumber": "MH123456",
     "workingAt": "TMSS Medical College & Rafatullah Community Hospital, Bogura",
     "availability": ["Monday", "Wednesday", "Friday"],
-    "consultationFee": 500
+    "consultationFee": 500,
+    "profileDescription": "Dr. Arjun Mehta is a highly experienced general physician known for his patient-centered approach and accurate diagnoses in internal medicine."
   },
   {
     "id": "doc002",
@@ -21,7 +22,8 @@
     "registrationNumber": "WB789654",
     "workingAt": "Apollo Hospitals, Kolkata",
     "availability": ["Tuesday", "Thursday", "Saturday"],
-    "consultationFee": 700
+    "consultationFee": 700,
+    "profileDescription": "Dr. Nisha Roy specializes in women's health, with extensive experience in treating gynecological conditions and ensuring maternal well-being."
   },
   {
     "id": "doc003",
@@ -33,7 +35,8 @@
     "registrationNumber": "DL654321",
     "workingAt": "AIIMS, Delhi",
     "availability": ["Monday", "Thursday", "Saturday"],
-    "consultationFee": 800
+    "consultationFee": 800,
+    "profileDescription": "Dr. Rahul Verma is a reputed orthopedic surgeon who focuses on joint care, trauma surgery, and sports injuries with precision and compassion."
   },
   {
     "id": "doc004",
@@ -45,7 +48,8 @@
     "registrationNumber": "MH987321",
     "workingAt": "Fortis Hospital, Mumbai",
     "availability": ["Wednesday", "Friday", "Sunday"],
-    "consultationFee": 600
+    "consultationFee": 600,
+    "profileDescription": "Dr. Sneha Kapoor is a skilled dermatologist providing modern skincare treatments for acne, allergies, and cosmetic concerns."
   },
   {
     "id": "doc005",
@@ -57,7 +61,8 @@
     "registrationNumber": "PB453627",
     "workingAt": "Max Hospital, Chandigarh",
     "availability": ["Monday", "Tuesday", "Friday"],
-    "consultationFee": 550
+    "consultationFee": 550,
+    "profileDescription": "Dr. Aman Sharma is dedicated to children's health, offering comprehensive pediatric care and support for childhood development."
   },
   {
     "id": "doc006",
@@ -69,7 +74,8 @@
     "registrationNumber": "UP786432",
     "workingAt": "Mind Care Clinic, Lucknow",
     "availability": ["Tuesday", "Thursday", "Saturday"],
-    "consultationFee": 750
+    "consultationFee": 750,
+    "profileDescription": "Dr. Riya Dutta is a compassionate psychiatrist, helping patients manage anxiety, depression, and other mental health conditions with care."
   },
   {
     "id": "doc007",
@@ -81,7 +87,8 @@
     "registrationNumber": "RJ123789",
     "workingAt": "Jaipur ENT Centre, Jaipur",
     "availability": ["Monday", "Wednesday", "Saturday"],
-    "consultationFee": 650
+    "consultationFee": 650,
+    "profileDescription": "Dr. Karan Singh is a well-regarded ENT specialist treating ear, nose, and throat disorders with modern techniques and patient-focused care."
   },
   {
     "id": "doc008",
@@ -93,7 +100,8 @@
     "registrationNumber": "GJ741852",
     "workingAt": "NeuroLife Hospital, Ahmedabad",
     "availability": ["Tuesday", "Thursday", "Friday"],
-    "consultationFee": 900
+    "consultationFee": 900,
+    "profileDescription": "Dr. Meera Patel provides expert neurological care, diagnosing and treating disorders like epilepsy, stroke, and movement issues."
   },
   {
     "id": "doc009",
@@ -105,7 +113,8 @@
     "registrationNumber": "TS951753",
     "workingAt": "Heartline Hospital, Hyderabad",
     "availability": ["Monday", "Wednesday", "Friday"],
-    "consultationFee": 1000
+    "consultationFee": 1000,
+    "profileDescription": "Dr. Aniket Reddy is a leading cardiologist offering advanced care in heart disease management, including ECG, angioplasty, and cardiac rehab."
   },
   {
     "id": "doc010",
@@ -117,7 +126,8 @@
     "registrationNumber": "KL123456",
     "workingAt": "Vision Care Centre, Kochi",
     "availability": ["Tuesday", "Thursday", "Saturday"],
-    "consultationFee": 500
+    "consultationFee": 500,
+    "profileDescription": "Dr. Priya Nair specializes in eye care and vision correction, treating cataracts, glaucoma, and common eye disorders with expertise."
   },
   {
     "id": "doc011",
@@ -129,7 +139,8 @@
     "registrationNumber": "GJ456321",
     "workingAt": "UroPlus Clinic, Surat",
     "availability": ["Monday", "Wednesday", "Friday"],
-    "consultationFee": 850
+    "consultationFee": 850,
+    "profileDescription": "Dr. Manav Desai is an expert urologist providing solutions for urinary tract problems, prostate care, and minimally invasive urological surgeries."
   },
   {
     "id": "doc012",
@@ -141,6 +152,7 @@
     "registrationNumber": "TN654987",
     "workingAt": "SugarCare Hospital, Chennai",
     "availability": ["Wednesday", "Friday", "Sunday"],
-    "consultationFee": 700
+    "consultationFee": 700,
+    "profileDescription": "Dr. Shalini Iyer helps patients manage hormonal imbalances, diabetes, and thyroid issues with a personalized treatment approach."
   }
 ]

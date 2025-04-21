@@ -20,19 +20,19 @@ const MedicalServices = () => {
         {/* 1111111 */}
         <div className="bg-[#FFFF] shadow-2xl px-12 py-10 rounded-2xl">
           <img src={succedDoctors} alt="" />
-          <p className="text-6xl font-bold">400+ </p>
+          <p className="text-6xl font-bold my-3">400+ </p>
           <h3 className="text-xl text-[#646158] font-bold">Total Doctors </h3>
         </div>
         {/* 2222222 */}
         <div className="bg-[#FFFF] shadow-2xl px-12 py-10 rounded-2xl">
           <img src={succedReviw} alt="" />
-          <p className="text-6xl font-bold">400+ </p>
+          <p className="text-6xl font-bold my-3">400+ </p>
           <h3 className="text-xl text-[#646158] font-bold"> Total Review</h3>
         </div>
         {/*  33333*/}
         <div className="bg-[#FFFF] shadow-2xl px-12 py-10 rounded-2xl">
           <img src={succedPatients} alt="" />
-          <p className="text-6xl font-bold">400+ </p>
+          <p className="text-6xl font-bold my-3">400+ </p>
           <h3 className="text-xl text-[#646158] font-bold">Patience</h3>
         </div>
         {/* 444444 */}

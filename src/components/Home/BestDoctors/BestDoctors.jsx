@@ -1,9 +1,9 @@
 import React from "react";
 import DoctorSample from "../../../assets/doctor-sample.png";
 import { FaRegRegistered } from "react-icons/fa";
+import { NavLink } from "react-router";
 
 const BestDoctors = ({ doctor }) => {
-  console.log(doctor);
   const { name, education, experience, registrationNumber } = doctor;
 
   return (
@@ -33,9 +33,12 @@ const BestDoctors = ({ doctor }) => {
           </span>
         </h3>
         <div className="text-center mt-3 ">
-          <button className="text-[#176AE5] text-lg font-semibold border-2 border-[#176AE5] px-24 rounded-3xl py-1">
-            View Details
-          </button>
+          <NavLink to={`/doctorDeatils/${registrationNumber}`}>
+            {" "}
+            <button className="text-[#176AE5] text-lg font-semibold border-2 border-[#176AE5] px-24 rounded-3xl py-1">
+              View Details
+            </button>
+          </NavLink>
         </div>
       </div>
     </div>
